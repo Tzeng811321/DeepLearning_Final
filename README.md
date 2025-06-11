@@ -8,36 +8,65 @@
 ## 程式結構圖
 
 ├── GPT_Angel.py
+
 │   └── chat_as_mahiru(user_text) → str
 │
+
 ├── GPT_Russian.py
+
 │   └── chat_as_Ellie(user_text) → str
 │
+
 ├── GPT_Loser.py
+
 │   └── chat_as_Yanami(user_text) → str
+
 │
+
 └── GPT_app.py
+
     ├── print_menu()
+    
     │     └─ 列出：
+    
     │        ├─ 1. 椎名真晝
+    
     │        ├─ 2. 九條艾琳
+    
     │        ├─ 3. 八奈見杏菜
+    
     │        └─ 0. 離開
+    
     │
+    
     └── main()
+         
          ├─ 顯示歡迎訊息
+    
          ├─ 外層迴圈
+         
          │    ├─ 呼叫 print_menu()
+         
          │    ├─ 讀取 choice
+         
          │    ├─ 如果 choice == "0" → break（結束程式）
+         
          │    ├─ 如果 choice 不在 {"1","2","3"} → 錯誤提示
+         
          │    └─ 如果 choice 在 {"1","2","3"} → 進入角色對話
+         
          │
+         
          └─ 角色對話迴圈
+         
               ├─ 讀取 user_input
+              
               ├─ 如果 user_input in {"", "/bye", "exit", "quit", "back"} → break（回主選單）
+              
               ├─ choice == "1" → 呼叫 chat_as_mahiru(user_input)
+              
               ├─ choice == "2" → 呼叫 chat_as_Ellie(user_input)
+              
               └─ choice == "3" → 呼叫 chat_as_Yanami(user_input)
 
 > **來源**：
