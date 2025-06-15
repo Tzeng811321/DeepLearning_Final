@@ -1,17 +1,17 @@
 # GPT_Angel.py  ── 椎名真晝 file_search 助手
 # ------------------------------------------------------------
-import os, json, time
+import os
+import json
+import time
 from dotenv import load_dotenv
 from openai import OpenAI
 
-# ====== 請依實際路徑調整 =================================================
-load_dotenv(r"D:/CYCU/113_DeepLearning/CODE/.env")
-    # .env 應含 OPENAI_API_KEY
-client = OpenAI()                                       # 自動抓環境變數金鑰
-# =========================================================================
-#hard code way
-#client = OpenAI(api_key="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
-# =========================================================================
+# 載入 .env 以取得 OPENAI_API_KEY。若路徑未指定，load_dotenv 會自動
+# 從當前目錄或其父層尋找 .env 檔。
+load_dotenv()
+client = OpenAI()  # 從環境變數讀取金鑰
+# 若需要硬編碼金鑰，可改為：
+# client = OpenAI(api_key="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
 
 # ---------- 參數（如需變更請只改這區） -------------------
 VECTOR_STORE_ID = "vs_6846de662bb08191a38989a9100f4170"  # 你的小說向量庫
