@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>角色聊天室</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <div class="chat-container">
+    <!-- 聊天訊息顯示區 -->
+    <div id="chat-window"></div>
+
+    <!-- 輸入中指示 -->
+    <div id="typing-indicator" class="typing hidden">
+      角色正在輸入中...
+    </div>
+
+    <!-- 輸入區 -->
+    <div class="input-area">
+      <select id="role-select">
+        <option value="mahiru">椎名真晝</option>
+        <option value="ellie">九條艾琳</option>
+        <option value="yanami">八奈見杏菜</option>
+      </select>
+      <input type="text" id="user-input" placeholder="輸入訊息…" />
+      <button id="send-btn">送出</button>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>

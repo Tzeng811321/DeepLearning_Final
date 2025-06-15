@@ -1,0 +1,5 @@
+Flask>=2.0
+openai>=1.0     # 若你 chat 函式裡有呼叫 OpenAI API
+httpx==0.13.0
+requests>=2.20
+dotenv==0.9.9
