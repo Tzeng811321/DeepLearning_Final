@@ -1,4 +1,4 @@
-倉庫語言
+**倉庫語言
 
 Python
 
@@ -16,7 +16,9 @@ CSS
 
 樣式定義於 static/css/style.css。
 
-主要函式庫 (requirements.txt)
+
+
+**主要函式庫 (requirements.txt)
 Flask（後端 Web Framework）
 
 openai（與 OpenAI API 溝通）
@@ -28,7 +30,7 @@ requests（HTTP 請求函式庫）
 dotenv（讀取 .env 檔設定）
 
 
-程式碼結構
+**程式碼結構
 
     backend/
     
@@ -47,4 +49,5 @@ dotenv（讀取 .env 檔設定）
         └── images/         # 角色頭像等資源
 
 
+**Summary
 整體而言，這個倉庫是一個以 Python/Flask 為後端、搭配 HTML/CSS/JavaScript 前端的簡易聊天應用程式。使用者可在網頁或終端選擇三個預設角色（由 GPT_Angel.py、GPT_Russian.py、GPT_Loser.py 分別實作）進行對話，各角色檔中透過 OpenAI API 取得回應，並使用 .env 檔設定相關參數與向量庫。
