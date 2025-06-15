@@ -1,16 +1,16 @@
 # GPT_Russian.py  ── 八奈見同學 file_search 助手
 # ------------------------------------------------------------
-import os, json, time
-from dotenv import load_dotenv #hard code way 這行要註解掉
+import os
+import json
+import time
+from dotenv import load_dotenv
 from openai import OpenAI
 
-# ====== 請依實際路徑調整 =================================================
-load_dotenv(r"D:/CYCU/113_DeepLearning/CODE/.env")
-    # .env 應含 OPENAI_API_KEY
-client = OpenAI()                                       # 自動抓環境變數金鑰
-# =========================================================================
-#hard code way
-#client = OpenAI(api_key="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+# 載入 .env 以取得 OPENAI_API_KEY，load_dotenv 會自動搜尋 .env 檔。
+load_dotenv()
+client = OpenAI()  # 從環境變數讀取金鑰
+# 若需要硬編碼金鑰，可改為：
+# client = OpenAI(api_key="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
 # =========================================================================
 
 # ---------- 參數（如需變更請只改這區） -------------------
@@ -140,5 +140,5 @@ if __name__ == "__main__":
             break
 
         reply = chat_as_Yanami(user_input)
-        print("八奈見杏菜", reply, "\n")
+        print("八奈見杏菜：", reply, "\n")
 # ====================== 互動式 CLI 結束 =================================
