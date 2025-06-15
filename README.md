@@ -32,29 +32,17 @@ dotenv（讀取 .env 檔設定）
     backend/
     
     ├── app.py              # 啟動 Flask 伺服器，提供聊天 API 與前端頁面
-    
     ├── chat_handlers.py    # 根據角色呼叫對應聊天函式
-    
     ├── GPT_app.py          # 終端介面，可選擇角色進行對話
-    
     ├── GPT_Angel.py        # 椎名真晝角色對話邏輯
-    
     ├── GPT_Russian.py      # 九條艾琳角色對話邏輯
-    
     ├── GPT_Loser.py        # 八奈見杏菜角色對話邏輯
-    
     ├── requirements.txt    # 依賴套件列表
-    
     ├── templates/
-    
     │   └── index.html      # 前端頁面
-    
     └── static/
-    
         ├── css/style.css   # 頁面樣式
-        
         ├── js/chat.js      # 前端互動程式
-        
         └── images/         # 角色頭像等資源
 
 
