@@ -19,6 +19,7 @@ CSS
 
 
 **主要函式庫 (requirements.txt)**
+
 Flask（後端 Web Framework）
 
 openai（與 OpenAI API 溝通）
